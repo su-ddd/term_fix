@@ -1,0 +1,5 @@
+services:
+  term_fix_event_subscriber:
+    class: Drupal\term_fix\EventSubscriber\TermFixSubscriber
+    tags:
+      - {name: event_subscriber}

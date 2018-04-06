@@ -1,0 +1,20 @@
+<?php
+
+use Drupal\taxonomy\TermInterface;
+
+#$result = term_fix_delete_term(360);
+
+function term_fix_delete_term($tid) {
+  $controller = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+  $entity = $controller->load($tid);
+  if ($entity) {
+    $controller->delete(array($entity));
+  }
+ 
+  echo '<span style="color:white">';
+#  echo print_r($entity, true);
+  echo '</span>';
+  return $tid;
+}
+
+?>

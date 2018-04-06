@@ -1,0 +1,14 @@
+term_fix.delete:
+  path: '/term_fix/delete'
+  defaults:
+    _controller: '\Drupal\term_fix\Controller\TermFixController::delete'
+    _title: 'Delete Terms'
+  requirements:
+    _permission: 'access content'
+term_fix.show:
+  path: '/term_fix/show'
+  defaults:
+    _controller: '\Drupal\term_fix\Controller\TermFixController::show'
+    _title: 'Show Terms'
+  requirements:
+    _permission: 'access content'
